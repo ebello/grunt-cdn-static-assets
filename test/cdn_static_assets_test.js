@@ -30,9 +30,9 @@ exports.cdn_static_assets = {
   default_options: function(test) {
     test.expect(1);
 
-    var actual = grunt.file.read('tmp/default_options');
-    var expected = grunt.file.read('test/expected/default_options');
-    test.equal(actual, expected, 'should describe what the default behavior is.');
+    var actualjs = grunt.file.read('tmp/sample.js');
+    var expectedjs = grunt.file.read('test/expected/sample.js');
+    test.equal(actualjs, expectedjs, 'should add CDN for files referenced in JS files.');
 
     test.done();
   },

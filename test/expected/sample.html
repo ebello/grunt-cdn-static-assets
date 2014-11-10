@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <style>
+      body {
+        background-image: url('//cdn.example.com/300pxJPEG.jpg');
+        background-image: url('//cdn.example.com/300pxJPEG.jpg');
+        background-image: url('//cdn.example.com/300pxJPEG.jpg');
+        background-image: url('foo/300pxJPEG.jpg');
+        background-image: url('300pxJPEG/does-not-exist.jpg');
+      }
+    </style>
+    <link href="//cdn.example.com/sample.css" rel="stylesheet" type="text/css" />
+    <link href="does-not-exist.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/x-icon" href="//cdn.example.com/subfolder/testing.ico">
+  </head>
+  <body>
+    <h1>Hello World</h1>
+    <img src=foo/hello.png data-foo="bar"/>
+    <img src="//cdn.example.com/300.px.gif"/>
+    <img src="foo.png"/>
+    <img src="//cdn.example.com/300pxPNG.png" data-width="900"/>
+    <img src=//cdn.example.com/300pxPNG.png>
+    <picture>
+      <img srcset="//cdn.example.com/300pxJPEG.jpg, //cdn.example.com/subfolder/Placeholder.svg 2x" alt="Placeholder image">
+    </picture>
+
+    <script src="//cdn.example.com/sample.js"></script>
+    <script src="does-not-exist.js"></script>
+  </body>
+</html>

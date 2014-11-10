@@ -1,0 +1,12 @@
+body {
+  background-color: #fff;
+  background-image: url('data:/rgjoierfjeori');
+  color: #000;
+}
+div {
+  background-image: url('//cdn.example.com/Placeholder.svg');
+}
+p {
+  text-transform: uppercase;
+  background-image: url('does-not-exist.png');
+}
