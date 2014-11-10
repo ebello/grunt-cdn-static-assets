@@ -1,0 +1,42 @@
+{
+  "name": "grunt-cdn-static-assets",
+  "description": "Prepends a CDN url to any url that matches a provided set of static assets",
+  "version": "0.1.0",
+  "homepage": "https://github.com/ebello/grunt-cdn-static-assets",
+  "author": {
+    "name": "Ernie Bello",
+    "email": "ernie@ern.me",
+    "url": "http://ern.me"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ebello/grunt-cdn-static-assets.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ebello/grunt-cdn-static-assets/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/ebello/grunt-cdn-static-assets/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "^0.9.2",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-nodeunit": "^0.3.3",
+    "grunt": "~0.4.5"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.5"
+  },
+  "keywords": [
+    "gruntplugin"
+  ]
+}
