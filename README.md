@@ -1,4 +1,4 @@
-# grunt-cdn-static-assets
+# grunt-cdn-static-assets [![Build Status](https://travis-ci.org/ebello/grunt-cdn-static-assets.svg?branch=master)](https://travis-ci.org/ebello/grunt-cdn-static-assets)
 
 > Prepends a CDN url to any url that matches a provided set of static assets
 
