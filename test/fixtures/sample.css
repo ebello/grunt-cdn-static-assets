@@ -4,7 +4,7 @@ body {
   color: #000;
 }
 div {
-  background-image: url('/Placeholder.svg');
+  background-image: url('/subfolder/Placeholder.svg');
 }
 p {
   text-transform: uppercase;

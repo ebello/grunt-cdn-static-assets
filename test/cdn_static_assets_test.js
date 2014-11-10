@@ -28,20 +28,55 @@ exports.cdn_static_assets = {
     done();
   },
   default_options: function(test) {
-    test.expect(1);
+    test.expect(3);
 
-    var actualjs = grunt.file.read('tmp/sample.js');
+    var actualjs = grunt.file.read('tmp/default_options/sample.js');
     var expectedjs = grunt.file.read('test/expected/sample.js');
     test.equal(actualjs, expectedjs, 'should add CDN for files referenced in JS files.');
 
+    var actualcss = grunt.file.read('tmp/default_options/sample.css');
+    var expectedcss = grunt.file.read('test/expected/sample.css');
+    test.equal(actualcss, expectedcss, 'should add CDN for files referenced in CSS files.');
+
+    var actualhtml = grunt.file.read('tmp/default_options/sample.html');
+    var expectedhtml = grunt.file.read('test/expected/sample.html');
+    test.equal(actualhtml, expectedhtml, 'should add CDN for files referenced in HTML files.');
+
     test.done();
   },
-  custom_options: function(test) {
-    test.expect(1);
+  trailing_slash: function(test) {
+    test.expect(3);
 
-    var actual = grunt.file.read('tmp/custom_options');
-    var expected = grunt.file.read('test/expected/custom_options');
-    test.equal(actual, expected, 'should describe what the custom option(s) behavior is.');
+    var actualjs = grunt.file.read('tmp/trailing_slash/sample.js');
+    var expectedjs = grunt.file.read('test/expected/sample.js');
+    test.equal(actualjs, expectedjs, 'should add CDN for files referenced in JS files.');
+
+    var actualcss = grunt.file.read('tmp/trailing_slash/sample.css');
+    var expectedcss = grunt.file.read('test/expected/sample.css');
+    test.equal(actualcss, expectedcss, 'should add CDN for files referenced in CSS files.');
+
+    var actualhtml = grunt.file.read('tmp/trailing_slash/sample.html');
+    var expectedhtml = grunt.file.read('test/expected/sample.html');
+    test.equal(actualhtml, expectedhtml, 'should add CDN for files referenced in HTML files.');
+
+
+    test.done();
+  },
+  no_js_css: function(test) {
+    test.expect(3);
+
+    var actualjs = grunt.file.read('tmp/no_js_css/sample.js');
+    var expectedjs = grunt.file.read('test/expected/no_js_css/sample.js');
+    test.equal(actualjs, expectedjs, 'should add CDN for files referenced in JS files.');
+
+    var actualcss = grunt.file.read('tmp/no_js_css/sample.css');
+    var expectedcss = grunt.file.read('test/expected/sample.css');
+    test.equal(actualcss, expectedcss, 'should add CDN for files referenced in CSS files.');
+
+    var actualhtml = grunt.file.read('tmp/no_js_css/sample.html');
+    var expectedhtml = grunt.file.read('test/expected/no_js_css/sample.html');
+    test.equal(actualhtml, expectedhtml, 'should add CDN for files referenced in HTML files.');
+
 
     test.done();
   },

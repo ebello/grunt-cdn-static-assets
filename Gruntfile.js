@@ -32,18 +32,36 @@ module.exports = function(grunt) {
     cdn_static_assets: {
       default_options: {
         options: {
+          cdn: '//cdn.example.com',
+          directory: 'test/fixtures',
         },
         files: {
-          'tmp/sample.js': 'test/fixtures/sample.js'
+          'tmp/default_options/sample.js': 'test/fixtures/sample.js',
+          'tmp/default_options/sample.css': 'test/fixtures/sample.css',
+          'tmp/default_options/sample.html': 'test/fixtures/sample.html'
         }
       },
-      custom_options: {
+      trailing_slash: {
         options: {
-          separator: ': ',
-          punctuation: ' !!!'
+          cdn: '//cdn.example.com/',
+          directory: '<%= cdn_static_assets.default_options.options.directory %>',
         },
         files: {
-          'tmp/custom_options': ['test/fixtures/testing', 'test/fixtures/123']
+          'tmp/trailing_slash/sample.js': 'test/fixtures/sample.js',
+          'tmp/trailing_slash/sample.css': 'test/fixtures/sample.css',
+          'tmp/trailing_slash/sample.html': 'test/fixtures/sample.html'
+        }
+      },
+      no_js_css: {
+        options: {
+          cdn: '//cdn.example.com',
+          directory: 'test/fixtures',
+          staticAssetExtensions: ['ico', 'jpg', 'png', 'gif', 'svg']
+        },
+        files: {
+          'tmp/no_js_css/sample.js': 'test/fixtures/sample.js',
+          'tmp/no_js_css/sample.css': 'test/fixtures/sample.css',
+          'tmp/no_js_css/sample.html': 'test/fixtures/sample.html'
         }
       }
     },
