@@ -35,11 +35,12 @@ module.exports = function(grunt) {
           cdn: '//cdn.example.com',
           directory: 'test/fixtures',
         },
-        files: {
-          'tmp/default_options/sample.js': 'test/fixtures/sample.js',
-          'tmp/default_options/sample.css': 'test/fixtures/sample.css',
-          'tmp/default_options/sample.html': 'test/fixtures/sample.html'
-        }
+        files: [{
+          expand: true,
+          cwd: 'test/fixtures',
+          src: '**/*.{css,js,html}',
+          dest: 'tmp/default_options'
+        }]
       },
       trailing_slash: {
         options: {

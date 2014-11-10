@@ -1,7 +1,7 @@
 {
   "name": "grunt-cdn-static-assets",
   "description": "Prepends a CDN url to any url that matches a provided set of static assets",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "homepage": "https://github.com/ebello/grunt-cdn-static-assets",
   "author": {
     "name": "Ernie Bello",
