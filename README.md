@@ -1,5 +1,7 @@
 # grunt-cdn-static-assets [![Build Status](https://travis-ci.org/ebello/grunt-cdn-static-assets.svg?branch=master)](https://travis-ci.org/ebello/grunt-cdn-static-assets)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/ebello/grunt-cdn-static-assets.svg)](https://greenkeeper.io/)
+
 > Prepends a CDN url to any url that matches a provided set of static assets
 
 ## Getting Started
